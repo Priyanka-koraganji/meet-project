@@ -55,11 +55,13 @@ describe('<App /> integration', () => {
         expect(AppWrapper.state('events')).toEqual(eventsToShow);
         AppWrapper.unmount();
     });
+
     test('get all events when user selects see all events', async () => {
         const AppWrapper = mount(<App />);
         const CitySearchWrapper = AppWrapper.find(CitySearch);
         const suggestions = CitySearchWrapper.state('suggestions');
-        CitySearchWrapper.find('.suggestions li').at(suggestions.length).simulate('click');
+        const suggestionItems = CitySearchWrapper.find('.suggestions li');
+        await suggestionItems.at(suggestionItems.length - 1).simulate('click');
         const allEvents = await getEvents();
         expect(AppWrapper.state('events')).toEqual(allEvents);
         AppWrapper.unmount();

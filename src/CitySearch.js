@@ -21,19 +21,21 @@ class CitySearch extends Component {
         });
     };
     handleItemClicked = (suggestion) => {
+        let number = undefined;
         this.setState({
             query: suggestion,
             showSuggestions: false
         });
 
-        this.props.updateEvents(suggestion);
+        this.props.updateEvents(suggestion, number);
     }
     render() {
         return (
             <div className="CitySearch">
+                <label for="city">Enter City Name: </label>
                 <input
                     type="text"
-                    className="city"
+                    className="city" id="city"
                     value={this.state.query}
                     onChange={this.handleInputChanged}
                     onFocus={() => { this.setState({ showSuggestions: true }) }}
