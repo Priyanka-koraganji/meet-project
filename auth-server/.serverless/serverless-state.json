@@ -886,7 +886,7 @@
     },
     "layers": {},
     "isDashboardMonitoringPreconfigured": false,
-    "artifact": "/Users/prashantpriya/Desktop/CF Projects/meet-final/auth-server/.serverless/auth-server.zip"
+    "artifact": "/Users/prashantpriya/Desktop/CF Projects/meet/auth-server/.serverless/auth-server.zip"
   },
   "package": {
     "artifactDirectoryName": "serverless/auth-server/dev/1657848802948-2022-07-15T01:33:22.948Z",
