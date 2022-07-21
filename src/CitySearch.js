@@ -32,7 +32,7 @@ class CitySearch extends Component {
     render() {
         return (
             <div className="CitySearch">
-                <label for="city">Enter City Name: </label>
+                <h2>Enter City Name: </h2>
                 <input
                     type="text"
                     className="city" id="city"

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Button, Card } from 'react-bootstrap';
 
 class Event extends Component {
     constructor() {
@@ -17,14 +18,15 @@ class Event extends Component {
         const { event } = this.props;
         const { Details } = this.state;
         return (
-            <div>
+            <div className='event'>
                 <div>
+
                     <h2 className="summary">{event.summary}</h2>
                     <p className="time">{event.created}</p>
                     <p className="location">{event.location}</p>
                     {
                         Details ?
-                            '' : <button className="show-details" onClick={() => this.detailsButton(this.state)}>show details</button>
+                            '' : <Button variant="warning" className="show-details" onClick={() => this.detailsButton(this.state)}>show details</Button>
                     }
                 </div>
                 {
@@ -32,7 +34,7 @@ class Event extends Component {
                         <div className='more-details'>
                             <h2>About Event</h2>
                             <p>{event.description}</p>
-                            <button className="hide-details" onClick={() => this.detailsButton(this.state)}>hide details</button>
+                            <Button variant="outline-warning" className="hide-details" onClick={() => this.detailsButton(this.state)}>hide details</Button>
                         </div> : ''
                 }
 

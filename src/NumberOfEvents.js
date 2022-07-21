@@ -9,30 +9,30 @@ class NumberOfEvents extends Component {
         }
     }
     handleInputChanged = (event) => {
-        let number = event.target.value; 
+        let number = event.target.value;
         this.setState({
             number: number
         });
     };
-    
-    handleItemClicked=()=>{
+
+    handleItemClicked = () => {
         let location = undefined;
         let number = this.state.number;
         this.props.updateEvents(location, number);
     }
-    
+
     render() {
 
         return (
             <div className="NumberOfEvents">
-                <p>Number of Events:</p>
+                <h2>Number of Events:</h2>
                 <input
                     type="textbox"
                     className="number-of-events"
                     value={this.state.number}
                     onChange={this.handleInputChanged}
                 />
-        <button onClick={this.handleItemClicked}>Get</button>
+                <button className='getButton' onClick={this.handleItemClicked}>Get Events</button>
             </div>
         );
     }
