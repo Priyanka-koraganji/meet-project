@@ -19,9 +19,9 @@ class App extends Component {
   componentDidMount() {
     this.mounted = true;
     getEvents().then((events) => {
-      if (this.mounted) {
-        this.setState({ events, locations: extractLocations(events) });
-      }
+
+      this.setState({ events, locations: extractLocations(events) });
+
     });
   }
 
@@ -29,7 +29,7 @@ class App extends Component {
     this.mounted = false;
   }
   updateEvents = (location, number) => {
-    if (number === undefined) {
+    if (!number) {
       number = this.state.eventCount
     }
     else {
@@ -37,14 +37,14 @@ class App extends Component {
         eventCount: number
       })
     }
-    if (location === undefined) {
+    if (!location) {
       location = this.state.defLocation
     }
     console.log(location, number);
     getEvents().then((events) => {
       let locationEvents = (location === 'all') ?
         events :
-        events.filter((event) => event.location === location).slice(0, number);
+        events.filter((event) => event.location === location);
       locationEvents = locationEvents.slice(0, number);
       console.log(locationEvents);
       this.setState({

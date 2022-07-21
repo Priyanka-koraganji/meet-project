@@ -16,11 +16,10 @@
 
 .EventList {
   padding: 2vh;
-  display: flex;
-  flex-wrap: wrap;
+  /* display: flex; */
 }
 
-*/ .App * {
+.App * {
   box-sizing: border-box;
 }
 
@@ -99,13 +98,11 @@ input[type="textbox"] {
 
 .event {
   padding: 10px 10px 35px;
-  margin-bottom: 10px;
-  margin-right: 20px;
-  text-align: left;
+  text-align: center;
   border-radius: 4px;
   position: relative;
   border: 1px solid #6ccdca;
-  width: 30opx;
+  width: 100%;
 
 }
 
@@ -261,4 +258,16 @@ input[type="textbox"] {
     min-width: auto;
     margin: 0 auto;
   }
+
 }
+
+/* @media screen and (max-width: 600px) {
+  .EventList {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .event {
+    width: 100%;
+  }
+} */

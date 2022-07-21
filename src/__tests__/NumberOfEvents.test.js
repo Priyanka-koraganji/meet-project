@@ -7,19 +7,31 @@ describe('<NumberOfEvents /> Component', () => {
     beforeAll(() => {
         NumberOfEventsWrapper = shallow(<NumberOfEvents />);
     });
-    test('render textbox element',()=>{
-        expect(NumberOfEventsWrapper.find('.number-of-events')).toHaveLength(1)
+    test('display 32 by default', () => {
+        expect(
+            NumberOfEventsWrapper.find('.number-of-events').get(0).props.value
+        ).toEqual(32);
     });
-    test('render textbox input correctly',()=>{
-        const number = NumberOfEventsWrapper.state('number');
-        expect(NumberOfEventsWrapper.find('.number-of-events').prop('value')).toBe(number)
+
+    test('display 32 if user input is not in range 1-32', () => {
+        NumberOfEventsWrapper.find('.number-of-events').simulate(
+            'change', {target: { value: 40 }}
+        );
+        NumberOfEventsWrapper.setState({ number: 32 });
+        expect(NumberOfEventsWrapper.state('number')).toEqual(32);
     });
-    test('change state when textbox input changes',()=>{
-        NumberOfEventsWrapper.setState({
-            number:32
-        })
-        const eventObj = { target: { value: 22 } };
-        NumberOfEventsWrapper.find('.number-of-events').simulate('change',eventObj);
-        expect(NumberOfEventsWrapper.state('number')).toBe(22)
-    })
+    test('user change number of events', () => {
+        NumberOfEventsWrapper.find('.number-of-events').simulate(
+            'change', {target: { value: 5 }}
+        );
+        expect(NumberOfEventsWrapper.state('number')).toEqual(5);
+    });
+
+    
+    test('change numberOfEvents state when number input changes', () => {
+        NumberOfEventsWrapper.setState({ number: 10 });
+        NumberOfEventsWrapper.find('.number-of-events').simulate('change', { target: { value: 4 } });
+        expect(NumberOfEventsWrapper.state('number')).not.toEqual(undefined);
+        expect(NumberOfEventsWrapper.state('number')).toEqual(4);
+    });
 })

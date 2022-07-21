@@ -10,17 +10,34 @@ class NumberOfEvents extends Component {
     }
     handleInputChanged = (event) => {
         let number = event.target.value;
+        // if (number > 0 && number <= 32) {
+        //     this.setState({
+        //         number: number
+        //     });
+        // }
+        // else if (number > 32 || number < 1) {
+        //     this.setState({
+        //         number: 32
+        //     });
+        //     number = 32;
+        // } else {
+        //     this.setState({
+        //         number: NaN
+        //     });
+        //     number = 1;
+        // }
+
         this.setState({
             number: number
-        });
+        })
+
+
     };
 
     handleItemClicked = () => {
-        let location = undefined;
         let number = this.state.number;
-        this.props.updateEvents(location, number);
+        this.props.updateEvents(undefined, number);
     }
-
     render() {
 
         return (
