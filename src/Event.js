@@ -26,7 +26,7 @@ class Event extends Component {
                     <p className="location">{event.location}</p>
                     {
                         Details ?
-                            '' : <Button variant="warning" className="show-details" onClick={() => this.detailsButton(this.state)}>show details</Button>
+                            '' : <button variant="warning" className="show-details" onClick={() => this.detailsButton(this.state)}>Show Details</button>
                     }
                 </div>
                 {
@@ -34,7 +34,7 @@ class Event extends Component {
                         <div className='more-details'>
                             <h2>About Event</h2>
                             <p>{event.description}</p>
-                            <Button variant="outline-warning" className="hide-details" onClick={() => this.detailsButton(this.state)}>hide details</Button>
+                            <button variant="outline-warning" className="hide-details" onClick={() => this.detailsButton(this.state)}>Hide Details</button>
                         </div> : ''
                 }
 

@@ -18,6 +18,7 @@
   padding: 2vh;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .App * {
@@ -31,6 +32,11 @@ h2 {
 ul {
   padding: 0;
   list-style: none;
+}
+
+.EventList>li {
+  width: 48%;
+  margin: 10px;
 }
 
 p {
@@ -72,8 +78,8 @@ input[type="textbox"] {
 
 .suggestions {
   width: 250px;
-  position: absolute;
-  z-index: 2;
+  /* position: absolute; */
+  /* z-index: 2; */
   align-self: center;
   margin: 0;
   top: 43px;
@@ -99,13 +105,11 @@ input[type="textbox"] {
 
 .event {
   padding: 10px 10px 35px;
-  margin-bottom: 10px;
-  margin-right: 20px;
-  text-align: left;
+  text-align: center;
   border-radius: 4px;
-  position: relative;
+  /* position: relative; */
   border: 1px solid #6ccdca;
-  width: 300px;
+
 
 }
 
@@ -122,6 +126,7 @@ input[type="textbox"] {
 .show-details,
 .hide-details,
 .getButton {
+  font-size: 1em;
   margin-top: 15px;
   border-radius: 4px;
   padding: 10px 15px;
@@ -139,6 +144,21 @@ input[type="textbox"] {
   box-shadow: 0px 0px 2px 2px #10b1a9;
 }
 
+@media screen and (max-width:650) {
+
+  .EventList {
+    border: 1px solid black;
+    padding: 2vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .Eventlist>li {
+    width: 100%;
+    background-color: #105351;
+  }
+
+}
 
 .name {
   font-size: 18px;
@@ -263,4 +283,5 @@ input[type="textbox"] {
     min-width: auto;
     margin: 0 auto;
   }
+
 }
