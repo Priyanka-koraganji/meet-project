@@ -20,7 +20,7 @@
   flex-wrap: wrap;
 }
 
-*/ .App * {
+.App * {
   box-sizing: border-box;
 }
 
@@ -105,11 +105,11 @@ input[type="textbox"] {
   border-radius: 4px;
   position: relative;
   border: 1px solid #6ccdca;
-  width: 30opx;
+  width: 300px;
 
 }
 
-.details-btn {
+/* .details-btn {
   position: absolute;
   right: 5px;
   bottom: 5px;
@@ -117,13 +117,15 @@ input[type="textbox"] {
   border-radius: 4px;
   outline: none;
   cursor: pointer;
-}
+} */
 
 .show-details,
 .hide-details,
 .getButton {
   margin-top: 15px;
+  border-radius: 4px;
   padding: 10px 15px;
+  cursor: pointer;
   border: 1px solid #0bb5af;
 }
 
