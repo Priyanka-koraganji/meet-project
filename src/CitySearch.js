@@ -21,13 +21,12 @@ class CitySearch extends Component {
         });
     };
     handleItemClicked = (suggestion) => {
-        let number = undefined;
         this.setState({
             query: suggestion,
             showSuggestions: false
         });
 
-        this.props.updateEvents(suggestion, number);
+        this.props.updateEvents(suggestion, undefined);
     }
     render() {
         return (

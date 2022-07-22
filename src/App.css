@@ -18,9 +18,10 @@
   padding: 2vh;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 
-*/ .App * {
+.App * {
   box-sizing: border-box;
 }
 
@@ -31,6 +32,11 @@ h2 {
 ul {
   padding: 0;
   list-style: none;
+}
+
+.EventList>li {
+  width: 48%;
+  margin: 10px;
 }
 
 p {
@@ -72,8 +78,8 @@ input[type="textbox"] {
 
 .suggestions {
   width: 250px;
-  position: absolute;
-  z-index: 2;
+  /* position: absolute; */
+  /* z-index: 2; */
   align-self: center;
   margin: 0;
   top: 43px;
@@ -99,17 +105,15 @@ input[type="textbox"] {
 
 .event {
   padding: 10px 10px 35px;
-  margin-bottom: 10px;
-  margin-right: 20px;
-  text-align: left;
+  text-align: center;
   border-radius: 4px;
-  position: relative;
+  /* position: relative; */
   border: 1px solid #6ccdca;
-  width: 30opx;
+
 
 }
 
-.details-btn {
+/* .details-btn {
   position: absolute;
   right: 5px;
   bottom: 5px;
@@ -117,13 +121,16 @@ input[type="textbox"] {
   border-radius: 4px;
   outline: none;
   cursor: pointer;
-}
+} */
 
 .show-details,
 .hide-details,
 .getButton {
+  font-size: 1em;
   margin-top: 15px;
   padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 4px;
   border: 1px solid #0bb5af;
 }
 
@@ -137,8 +144,25 @@ input[type="textbox"] {
   box-shadow: 0px 0px 2px 2px #10b1a9;
 }
 
+@media screen and (max-width:650) {
 
-.name {
+  /* .EventList {
+    border: 1px solid black;
+    padding: 2vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .Eventlist>li {
+    width: 100%;
+    background-color: #105351;
+  } */
+  .App {
+    background-color: aqua;
+  }
+}
+
+/* .name {
   font-size: 18px;
   font-weight: 600;
 }
@@ -261,4 +285,5 @@ input[type="textbox"] {
     min-width: auto;
     margin: 0 auto;
   }
-}
+
+} */
