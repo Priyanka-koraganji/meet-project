@@ -37,36 +37,36 @@ describe('show/hide an event details', () => {
     });
 });
 
-// describe('Filter events by city', () => {
-//     let browser;
-//     let page;
-//     beforeAll(async () => {
-//         jest.setTimeout(30000);
-//         browser = await puppeteer.launch({
-//             headless: false,
-//             slowMo: 200, // slow down by 250ms
-//             ignoreDefaultArgs: ['--disable-extensions'] // ignores default setting that causes timeout errors
-//         });
-//         page = await browser.newPage();
-//         await page.goto('http://localhost:3000/');
-//         await page.waitForSelector('.App');
-//     });
-//     afterAll(() => {
-//         browser.close();
-//     });
-//     test('When user hasnt searched for a city, show upcoming events from all cities', async () => {
-//         const events = await page.$$('.EventList li');
-//         expect(events).toHaveLength(mockData.length);
-//     })
-//     test('User should see a list of suggestions when they search for a city', async () => {
-//         await page.type('.city');
-//         let suggestions = await page.$$('.suggestions li');
-//         expect(suggestions).toHaveLength(2);
-//     });
-    // test('User can select a city from the suggested list', () => {
-    //     await page.type('.city');
-    //     let suggestions = await page.$$('.suggestions li');
-    //     await page.click('.suggestions[0]');
-
-    // })
-// });
+describe('Filter events by city', () => {
+    let browser;
+    let page;
+    beforeAll(async () => {
+        jest.setTimeout(30000);
+        browser = await puppeteer.launch({
+            headless: false,
+            slowMo: 200, // slow down by 250ms
+            ignoreDefaultArgs: ['--disable-extensions'] // ignores default setting that causes timeout errors
+        });
+        page = await browser.newPage();
+        await page.goto('http://localhost:3000/');
+        await page.waitForSelector('.App');
+    });
+    afterAll(() => {
+        browser.close();
+    });
+    test('When user hasnt searched for a city, show upcoming events from all cities', async () => {
+        const events = await page.$$('.EventList li');
+        expect(events).toHaveLength(mockData.length);
+    })
+    test('User should see a list of suggestions when they search for a city', async () => {
+        await page.type('.city', 'London, UK', { delay: 200 });
+        let suggestions = await page.$$('.suggestions li');
+        expect(suggestions).toHaveLength(2);
+    });
+    test('User can select a city from the suggested list', async () => {
+        await page.$('.suggestions');
+        await page.click('.suggestions > li:nth-child(1)');
+        let events = mockData.filter(event => { event.location === 'London, UK' })
+        expect(events).toBeDefined();
+    })
+});
