@@ -146,14 +146,15 @@ input[type="textbox"] {
 
 @media only screen and (max-width: 992px) {
   .EventList>li {
-    width: 100%;
+    width: 98%;
+    margin: 1%;
   }
 }
 
 @media only screen and (min-width: 992px) {
   .EventList>li {
     width: 48%;
-    margin: 0;
+    margin: 1%;
   }
 }
 
