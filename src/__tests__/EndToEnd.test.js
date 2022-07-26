@@ -64,9 +64,12 @@ describe('Filter events by city', () => {
         expect(suggestions).toHaveLength(2);
     });
     test('User can select a city from the suggested list', async () => {
-        await page.$('.suggestions');
+        await page.reload();
+        await page.type('.city', 'London, UK');
+        // await page.click('.suggestions-item');
+        let events = mockData.filter(event => { event.location === 'London, UK' });
         await page.click('.suggestions > li:nth-child(1)');
-        let events = mockData.filter(event => { event.location === 'London, UK' })
-        expect(events).toBeDefined();
+        const expectedEvents = (await page.$$('.event')).length;
+        expect(expectedEvents).toBe(events.length);
     })
 });

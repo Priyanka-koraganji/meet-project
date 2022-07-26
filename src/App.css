@@ -176,11 +176,17 @@ input[type="textbox"] {
   overflow-x: hidden;
 }
 
-.numberOfEvents {
+.NumberOfEvents {
+  display: flex;
+  flex-direction: column;
+
+}
+
+/* .numberOfEvents {
   width: 200px;
   margin: 20px auto;
   text-align: center;
-}
+} */
 
 .button-wrapper {
   display: grid;
@@ -190,10 +196,10 @@ input[type="textbox"] {
   font-family: sans-serif;
 }
 
-.Alert {
+/* .Alert {
   position: fixed;
   top: 20px;
-}
+} */
 
 .data-vis-wrapper {
   display: flex;
