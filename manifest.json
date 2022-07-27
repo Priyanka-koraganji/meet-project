@@ -19,7 +19,7 @@
       "sizes": "512x512"
     }
   ],
-  "start_url": ".",
+  "start_url": "?code=4%2F0AdQt8qjblCX5Gg-aHVk9zn-b_lOXYszhlMMwS0FzGkgjH5t44x4vFxtU3iLc0ebZkpr32w&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcalendar.readonly",
   "display": "standalone",
   "theme_color": "#000000",
   "background_color": "#ffffff"
