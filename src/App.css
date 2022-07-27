@@ -144,19 +144,7 @@ input[type="textbox"] {
   box-shadow: 0px 0px 2px 2px #10b1a9;
 }
 
-@media only screen and (max-width: 992px) {
-  .EventList>li {
-    width: 98%;
-    margin: 1%;
-  }
-}
 
-@media only screen and (min-width: 992px) {
-  .EventList>li {
-    width: 48%;
-    margin: 1%;
-  }
-}
 
 .name {
   font-size: 18px;
@@ -274,7 +262,19 @@ input[type="textbox"] {
   font-family: "Roboto";
 }
 
+@media only screen and (max-width: 992px) {
+  .EventList>li {
+    width: 98%;
+    margin: 1%;
+  }
+}
 
+@media only screen and (min-width: 992px) {
+  .EventList>li {
+    width: 48%;
+    margin: 1%;
+  }
+}
 
 @media only screen and (min-width: 992px) {
   .data-vis-wrapper {
