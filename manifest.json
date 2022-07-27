@@ -3,7 +3,7 @@
   "name": "Create React App Sample",
   "icons": [
     {
-      "src": "favicon (1).ico",
+      "src": "favicon.ico",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon",
       "purpose": "any maskable"
@@ -19,7 +19,7 @@
       "sizes": "512x512"
     }
   ],
-  "start_url": "?code=4%2F0AdQt8qjblCX5Gg-aHVk9zn-b_lOXYszhlMMwS0FzGkgjH5t44x4vFxtU3iLc0ebZkpr32w&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcalendar.readonly",
+  "start_url": ".",
   "display": "standalone",
   "theme_color": "#000000",
   "background_color": "#ffffff"
