@@ -12,7 +12,6 @@ defineFeature(feature, test => {
         let AppWrapper;
         let NumberOfEventsWrapper;
         given('the user has started a search', () => {
-            AppWrapper = mount(<App />);
         });
 
         when('the users did not specify a number', () => {
