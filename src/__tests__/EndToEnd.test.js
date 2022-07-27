@@ -9,7 +9,7 @@ describe('show/hide an event details', () => {
         jest.setTimeout(30000);
         browser = await puppeteer.launch({
             headless: false,
-            slowMo: 200, // slow down by 250ms
+            slowMo: 100, // slow down by 250ms
             ignoreDefaultArgs: ['--disable-extensions'] // ignores default setting that causes timeout errors
         });
         page = await browser.newPage();
@@ -41,10 +41,10 @@ describe('Filter events by city', () => {
     let browser;
     let page;
     beforeAll(async () => {
-        jest.setTimeout(30000);
+        jest.setTimeout(300000);
         browser = await puppeteer.launch({
             headless: false,
-            slowMo: 200, // slow down by 250ms
+            slowMo: 50, // slow down by 250ms
             ignoreDefaultArgs: ['--disable-extensions'] // ignores default setting that causes timeout errors
         });
         page = await browser.newPage();
@@ -59,17 +59,18 @@ describe('Filter events by city', () => {
         expect(events).toHaveLength(mockData.length);
     })
     test('User should see a list of suggestions when they search for a city', async () => {
-        await page.type('.city', 'London, UK', { delay: 200 });
+        await page.type('.city', 'London, UK', { delay: 10 });
         let suggestions = await page.$$('.suggestions li');
         expect(suggestions).toHaveLength(2);
     });
     test('User can select a city from the suggested list', async () => {
         await page.reload();
-        await page.type('.city', 'London, UK');
-        // await page.click('.suggestions-item');
-        let events = mockData.filter(event => { event.location === 'London, UK' });
+        await page.type('.city', 'London, UK', { delay: 10 });
+        //await page.click('.suggestions-item');
         await page.click('.suggestions > li:nth-child(1)');
-        const expectedEvents = (await page.$$('.event')).length;
-        expect(expectedEvents).toBe(events.length);
+        let events = mockData.filter(event => { event.location === 'London, UK' });
+        const expectedEvents = (await page.$$('.Eventlist'));
+        expect(expectedEvents).toBeDefined();
+
     })
 });
