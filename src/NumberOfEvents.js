@@ -23,18 +23,21 @@ class NumberOfEvents extends Component {
                 number: 32,
                 errorMes: 'Enter valid number'
             });
+        } else {
+            this.setState({
+                number: number
+            })
+            this.props.updateNumberOfEvents(number);
         }
-        this.setState({
-            number: number
-        })
+
 
 
     };
 
-    handleItemClicked = () => {
-        let number = this.state.number;
-        this.props.updateEvents(undefined, number);
-    }
+    // handleItemClicked = () => {
+    //     let number = this.state.number;
+
+    // }
     render() {
 
         return (
@@ -47,7 +50,7 @@ class NumberOfEvents extends Component {
                         value={this.state.number}
                         onChange={this.handleInputChanged}
                     />
-                    <button className='getButton' onClick={this.handleItemClicked}>Get Events</button>
+                    {/* <button className='getButton' onClick={this.handleItemClicked}>Get Events</button> */}
                 </div>
                 <div className='error-alert'>
                     <ErrorAlert text={this.state.errorMes} />
