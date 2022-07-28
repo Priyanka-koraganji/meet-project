@@ -4,6 +4,7 @@ import EventList from './EventList';
 import CitySearch from './CitySearch';
 import NumberOfEvents from './NumberOfEvents';
 import { getEvents, extractLocations } from './api';
+import { OfflineAlert } from './Alert';
 import './nprogress.css';
 
 class App extends Component {
@@ -13,15 +14,14 @@ class App extends Component {
       events: [],
       locations: [],
       eventCount: 32,
-      defLocation: 'all'
+      defLocation: 'all',
+      navigatorMes: ''
     }
   }
   componentDidMount() {
     this.mounted = true;
     getEvents().then((events) => {
-
       this.setState({ events, locations: extractLocations(events) });
-
     });
   }
 
@@ -53,8 +53,12 @@ class App extends Component {
     });
   }
   render() {
+
     return (
       <div className="App">
+        <h1>Meet App</h1>
+        {navigator.onLine ? '' : <OfflineAlert text='data is cached data' />}
+
         <CitySearch locations={this.state.locations} updateEvents={this.updateEvents} />
         <NumberOfEvents updateEvents={this.updateEvents} />
         <EventList events={this.state.events} />
