@@ -41,14 +41,6 @@ class App extends Component {
     this.mounted = false;
   }
 
-  updateNumberOfEvents = (number) => {
-    let eventCount = this.state.eventCount;
-    this.setState({
-      eventCount: number
-    })
-    this.updateEvents(this.state.defLocation, eventCount);
-  }
-
   updateEvents = (location, number) => {
     if (!number) {
       number = this.state.eventCount
@@ -82,7 +74,7 @@ class App extends Component {
         {navigator.onLine ? '' : <OfflineAlert text='data is cached data' />}
 
         <CitySearch locations={this.state.locations} updateEvents={this.updateEvents} />
-        <NumberOfEvents updateNumberOfEvents={this.updateNumberOfEvents} />
+        <NumberOfEvents updateEvents={this.updateEvents} />
         <EventList events={this.state.events} />
         <WelcomeScreen showWelcomeScreen={this.state.showWelcomeScreen}
           getAccessToken={() => { getAccessToken() }} />
