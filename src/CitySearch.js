@@ -14,7 +14,9 @@ class CitySearch extends Component {
     }
     handleInputChanged = (event) => {
         const value = event.target.value;
-        this.setState({ showSuggestions: true });
+        this.setState({
+            showSuggestions: true
+        });
         const suggestions = this.props.locations.filter((location) => {
             return location.toUpperCase().indexOf(value.toUpperCase()) > -1;
         });
@@ -34,7 +36,8 @@ class CitySearch extends Component {
     handleItemClicked = (suggestion) => {
         this.setState({
             query: suggestion,
-            showSuggestions: false
+            showSuggestions: false,
+            infoText: ''
         });
 
         this.props.updateEvents(suggestion, undefined);
