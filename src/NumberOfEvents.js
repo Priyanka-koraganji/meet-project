@@ -27,13 +27,13 @@ class NumberOfEvents extends Component {
         this.setState({
             number: number
         })
+
+
     };
 
     handleItemClicked = () => {
         let number = this.state.number;
-        console.log(number);
         this.props.updateEvents(undefined, number);
-
     }
     render() {
 
