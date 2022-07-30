@@ -188,16 +188,16 @@ input[type="textbox"] {
   position: fixed;
   top: 20px;
 } */
-
-.data-vis-wrapper {
+/* -------------------------------------- Data Visualisation ----------------------------------------------*/
+/* .data-vis-wrapper {
   display: flex;
   align-items: center;
   flex-direction: column;
-}
+} */
 
-.data-vis-wrapper .recharts-responsive-container {
-  min-width: 100%;
-  display: flex;
+.data-vis-wrapper {
+  min-width: 400px;
+  /* display: flex; */
 }
 
 .recharts-surface {
@@ -266,6 +266,12 @@ input[type="textbox"] {
     width: 98%;
     margin: 1%;
   }
+
+  .data-vis-wrapper {
+    flex-direction: column;
+    width: 700px;
+    height: 300px;
+  }
 }
 
 @media only screen and (min-width: 992px) {
@@ -278,6 +284,7 @@ input[type="textbox"] {
 @media only screen and (min-width: 992px) {
   .data-vis-wrapper {
     flex-direction: row;
+
   }
 
   .data-vis-wrapper .recharts-responsive-container {
