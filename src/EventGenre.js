@@ -20,7 +20,7 @@ const EventGenre = ({ events }) => {
         // eslint-disable-next-line
     }, [events]);
     return (
-        <ResponsiveContainer height={400}>
+        <ResponsiveContainer>
             <PieChart width={400} height={400}>
                 <Pie
                     data={data}
