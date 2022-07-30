@@ -8,7 +8,7 @@ import { getEvents, extractLocations, checkToken, getAccessToken } from
   './api';
 import { OfflineAlert } from './Alert';
 import './nprogress.css';
-import { EventGenre } from './EventGenre';
+import EventGenre from './EventGenre';
 import {
   ScatterChart,
   Scatter,
@@ -85,6 +85,7 @@ class App extends Component {
     });
   }
   render() {
+    const { events } = this.state;
     if (this.state.showWelcomeScreen === undefined) return <div
       className="App" />
     return (
@@ -97,7 +98,7 @@ class App extends Component {
         <NumberOfEvents updateEvents={this.updateEvents} />
 
         <div className='data-vis-wrapper'>
-          {/* <EventGenre events={events} /> */}
+          <EventGenre events={events} />
           <ResponsiveContainer>
             <ScatterChart
               height={300}
