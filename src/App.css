@@ -178,7 +178,7 @@ input[type="textbox"] {
   margin-bottom: 4%;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
   border: 1px solid #6ccdca;
 }
 
