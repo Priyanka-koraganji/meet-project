@@ -170,7 +170,7 @@ input[type="textbox"] {
 
 /* -------------------------------------- Data Visualisation ----------------------------------------------*/
 .data-vis-wrapper {
-  margin-top: 4%;
+  margin: 4% auto;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -179,9 +179,7 @@ input[type="textbox"] {
 
 .data-vis-wrapper>div {
   width: 48%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding: 3%;
 }
 
 
