@@ -192,10 +192,11 @@ input[type="textbox"] {
 .data-vis-wrapper {
   display: flex;
   align-items: center;
+  justify-content: space-around;
 }
 
 .data-vis-wrapper>div {
-  width: 50%;
+  width: 48%;
 }
 
 .recharts-surface {
@@ -274,7 +275,7 @@ input[type="textbox"] {
   .data-vis-wrapper>div {
     padding: 2%;
     align-content: center;
-    width: 100%;
+    width: 98%;
   }
 
 }
