@@ -98,31 +98,35 @@ class App extends Component {
         <NumberOfEvents updateEvents={this.updateEvents} />
 
         <div className='data-vis-wrapper'>
-          <EventGenre events={events} />
+          <div>
+            <EventGenre events={events} />
+          </div>
 
-          <ResponsiveContainer height={400}>
-            <ScatterChart
-              height={300}
-              width={400}
-              margin={{
-                top: 20,
-                right: 20,
-                bottom: 20,
-                left: 20,
-              }}
-            >
-              <CartesianGrid />
-              <XAxis type="category" dataKey="city" name="City" />
-              <YAxis
-                allowDecimals={false}
-                type="number"
-                dataKey="number"
-                name="Events"
-              />
-              <Tooltip cursor={{ strokeDasharray: "3 3" }} />
-              <Scatter data={this.getData()} fill="#8884d8" />
-            </ScatterChart>
-          </ResponsiveContainer>
+          <div>
+            <ResponsiveContainer height={400}>
+              <ScatterChart
+                height={300}
+                width={400}
+                margin={{
+                  top: 20,
+                  right: 20,
+                  bottom: 20,
+                  left: 20,
+                }}
+              >
+                <CartesianGrid />
+                <XAxis type="category" dataKey="city" name="City" />
+                <YAxis
+                  allowDecimals={false}
+                  type="number"
+                  dataKey="number"
+                  name="Events"
+                />
+                <Tooltip cursor={{ strokeDasharray: "3 3" }} />
+                <Scatter data={this.getData()} fill="#8884d8" />
+              </ScatterChart>
+            </ResponsiveContainer>
+          </div>
         </div>
 
 

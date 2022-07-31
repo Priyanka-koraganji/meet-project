@@ -192,7 +192,10 @@ input[type="textbox"] {
 .data-vis-wrapper {
   display: flex;
   align-items: center;
-  flex-direction: column;
+}
+
+.data-vis-wrapper>div {
+  width: 50%;
 }
 
 .recharts-surface {
@@ -261,6 +264,13 @@ input[type="textbox"] {
     width: 98%;
     margin: 1%;
   }
+
+  .data-vis-wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
 }
 
 @media only screen and (min-width: 992px) {
@@ -269,15 +279,3 @@ input[type="textbox"] {
     margin: 1%;
   }
 }
-
-/* @media only screen and (min-width: 992px) {
-
-
-  .data-vis-wrapper .recharts-responsive-container {
-    flex-basis: 50%;
-    max-width: 50%;
-    min-width: auto;
-    margin: 0 auto;
-  }
-
-} */
