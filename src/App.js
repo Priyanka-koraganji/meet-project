@@ -99,8 +99,8 @@ class App extends Component {
 
         <NumberOfEvents updateEvents={this.updateEvents} />
 
+        <h2>Data Visualisation</h2>
         <div className='data-vis-wrapper'>
-          <h2>Data Visualisation</h2>
           <div>
             <EventGenre events={events} />
           </div>
