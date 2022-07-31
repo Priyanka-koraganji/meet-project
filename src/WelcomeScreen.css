@@ -30,7 +30,7 @@
 
 h1 {
     font-family: "Pacifico", cursive;
-    color: #1d848e;
+    color: #2C6BAA;
     text-align: center;
     margin-bottom: 40px;
     font-size: 40px;
@@ -71,7 +71,7 @@ p {
 }
 
 .google-btn:active {
-    background: #0e363a;
+    background: #2EB5D0;
 }
 
 .google-icon-wrapper {
@@ -81,6 +81,7 @@ p {
     background-color: #fff;
     display: flex;
     justify-content: center;
+    
     align-items: center;
 }
 
