@@ -100,6 +100,7 @@ class App extends Component {
         <NumberOfEvents updateEvents={this.updateEvents} />
 
         <div className='data-vis-wrapper'>
+          <h2>Data Visualisation</h2>
           <div>
             <EventGenre events={events} />
           </div>
