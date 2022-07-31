@@ -6,7 +6,7 @@ function WelcomeScreen(props) {
         <div className="WelcomeScreen">
             <div className="inner-wrapper">
                 <h1>
-                    <span>Meetup</span> App
+                    Meetup App
                 </h1>
                 <h4>Welcome to the MeetUp App!</h4>
                 <p>
