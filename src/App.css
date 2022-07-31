@@ -269,6 +269,12 @@ input[type="textbox"] {
     display: flex;
     align-items: center;
     flex-direction: column;
+    border: 1px solid black;
+  }
+
+  .data-vis-wrapper>div {
+    width: 100%;
+    border: 1px solid black;
   }
 
 }
