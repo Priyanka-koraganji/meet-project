@@ -58,7 +58,7 @@ input[type="textbox"] {
   padding: 3px 6px;
   border-radius: 4px;
   outline: none;
-  border: 1px solid #ccc;
+  border: 1px solid #6ccdca;
   font-size: 14px;
   line-height: 20px;
   align-self: center;
@@ -170,11 +170,16 @@ input[type="textbox"] {
 }
 
 /* -------------------------------------- Data Visualisation ----------------------------------------------*/
+.data-vis {
+  margin: 3% auto;
+}
+
 .data-vis-wrapper {
-  margin: 4% auto;
+  margin-bottom: 4%;
   display: flex;
   align-items: center;
   justify-content: space-around;
+  border: 1px solid #6ccdca;
 }
 
 .data-vis-wrapper>div {
