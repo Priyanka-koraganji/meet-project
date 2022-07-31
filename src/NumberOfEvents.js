@@ -33,7 +33,7 @@ class NumberOfEvents extends Component {
 
     handleItemClicked = () => {
         let number = this.state.number;
-        this.props.updateEvents(undefined, number);
+        this.props.updateNumverOfEvents(number);
     }
     render() {
 

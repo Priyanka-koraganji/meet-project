@@ -59,20 +59,26 @@ class App extends Component {
     })
     return data;
   };
+  updateNumberOfEvents = (number) => {
+    this.setState({
+      eventCount: number
+    })
+  }
 
-  updateEvents = (location, number) => {
-    if (!number) {
-      number = this.state.eventCount
-    }
-    else {
-      this.setState({
-        eventCount: number
-      })
-    }
+  updateEvents = (location) => {
+    let number = this.state.eventCount;
+    // if (!number) {
+    //   number = this.state.eventCount
+    // }
+    // else {
+    //   this.setState({
+    //     eventCount: number
+    //   })
+    // }
     if (!location) {
       location = this.state.defLocation
     }
-    console.log(location, number);
+
     getEvents().then((events) => {
       let locationEvents = (location === 'all') ?
         events :
@@ -97,7 +103,7 @@ class App extends Component {
 
         <CitySearch locations={this.state.locations} updateEvents={this.updateEvents} />
 
-        <NumberOfEvents updateEvents={this.updateEvents} />
+        <NumberOfEvents updateNumberOfEvents={this.updateNumberOfEvents} />
 
         <h2 className='data-vis'>Data Visualisation</h2>
         <div className='data-vis-wrapper'>
