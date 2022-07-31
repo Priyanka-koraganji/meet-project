@@ -92,9 +92,11 @@ class App extends Component {
       <div className="App">
         <h1>Meet App</h1>
         <h4>Choose your nearest city</h4>
+
         {navigator.onLine ? '' : <OfflineAlert text='data is cached data' />}
 
         <CitySearch locations={this.state.locations} updateEvents={this.updateEvents} />
+
         <NumberOfEvents updateEvents={this.updateEvents} />
 
         <div className='data-vis-wrapper'>
@@ -129,8 +131,8 @@ class App extends Component {
           </div>
         </div>
 
-
         <EventList events={this.state.events} />
+
         <WelcomeScreen showWelcomeScreen={this.state.showWelcomeScreen}
           getAccessToken={() => { getAccessToken() }} />
       </div>
