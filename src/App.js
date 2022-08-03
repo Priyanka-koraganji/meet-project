@@ -71,6 +71,10 @@ class App extends Component {
     }
     if (!location) {
       location = this.state.defLocation
+    }else{
+      this.setState({
+        defLocation: location
+      })
     }
     console.log(location, number);
     getEvents().then((events) => {
