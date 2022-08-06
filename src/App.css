@@ -187,6 +187,10 @@ input[type="textbox"] {
   padding: 3% 5%;
 }
 
+.event-genre {
+  padding-left: 15px;
+  
+}
 
 @media only screen and (max-width: 992px) {
   .EventList>li {

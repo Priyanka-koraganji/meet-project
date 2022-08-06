@@ -71,7 +71,7 @@ class App extends Component {
     }
     if (!location) {
       location = this.state.defLocation
-    }else{
+    } else {
       this.setState({
         defLocation: location
       })
@@ -106,7 +106,7 @@ class App extends Component {
 
         <h2 className='data-vis'>Data Visualisation</h2>
         <div className='data-vis-wrapper'>
-          <div>
+          <div className='event-genre'>
             <EventGenre events={events} />
           </div>
 
