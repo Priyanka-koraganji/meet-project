@@ -183,13 +183,8 @@ input[type="textbox"] {
 }
 
 .data-vis-wrapper>div {
-  width: 48%;
-  padding: 3% 5%;
-}
-
-.event-genre {
-  padding-left: 15px;
-  
+  width: 49%;
+  padding: 3% 3%;
 }
 
 @media only screen and (max-width: 992px) {
