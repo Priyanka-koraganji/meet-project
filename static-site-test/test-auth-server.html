@@ -52,7 +52,7 @@
         const resultLink = document.getElementById("authURL");
         // Replace this with your own endpoint
         const getAuthURL =
-            "https://y0dua2imue.execute-api.eu-central-1.amazonaws.com/dev/api/get-auth-url";
+            "https://etd7m2qf25.execute-api.eu-central-1.amazonaws.com/dev/api/get-auth-url";
 
         getURLElement.onclick = function () {
             fetch(getAuthURL)
@@ -76,7 +76,7 @@
         const getAccessToken = document.getElementById("getToken");
         const accessTokenElement = document.getElementById("accessToken");
         const getToken =
-            "https://y0dua2imue.execute-api.eu-central-1.amazonaws.com/dev/api/token";
+            "https://etd7m2qf25.execute-api.eu-central-1.amazonaws.com/dev/api/token";
 
         getAccessToken.onclick = function () {
             let code = codeValue.value;
@@ -89,9 +89,11 @@
             fetch(getTokenRequest)
                 .then(function (response) {
                     return response.json();
+                    console.log(response);
                 })
                 .then(function (json) {
                     accessTokenElement.innerText = JSON.stringify(json);
+
                 });
         };
         // --------------------- END OF STEP 2
@@ -99,7 +101,7 @@
         // -- STEP 3
         const getEvents = document.getElementById("getEvents");
         const events = document.getElementById("events");
-        const getCalendarEvents = "https://y0dua2imue.execute-api.eu-central-1.amazonaws.com/dev/api/get-events";
+        const getCalendarEvents = "https://etd7m2qf25.execute-api.eu-central-1.amazonaws.com/dev/api/get-events";
 
         getEvents.onclick = function () {
             const { access_token } = JSON.parse(accessTokenElement.innerText);
