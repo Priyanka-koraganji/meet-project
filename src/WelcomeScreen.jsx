@@ -34,7 +34,7 @@ function WelcomeScreen(props) {
                     </div>
                 </div>
                 <a
-                    href="https://Priyanka-koraganji.github.io/meet-project/privacy.html"
+                    href="/privacy.html"
                     rel="nofollow noopener"
                 >
                     Privacy policy
