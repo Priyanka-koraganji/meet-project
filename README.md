@@ -4,11 +4,16 @@ Description:
 The goal of this project is to build a serverless, progressive web application (PWA) with React using a test-driven development (TDD) technique. The application uses the Google Calendar API to fetch upcoming events.
 
 What technology did I use and why:
-For the frontend of my femmovies application I chose React
+For the frontend of my application I chose React.
 
-Type of application: I need a library helping me build the UI of my app. React is suited best for the view side of the mvc approach and its virtual DOM ensures faster rendering of views
-Scope: The component-based nature of React allows me to increase the scope of my web application with little to no performance issues or concerns about entropy.
+Type of application: 
+I need a library helping me build the UI of my app. React is suited best for the view side of the mvc approach and its virtual DOM ensures faster rendering of views.
+
+Scope: 
+The component-based nature of React allows me to increase the scope of my web application with little to no performance issues or concerns about entropy.
+
 Popularity: React is in high demand at the moment. This can be seen in job ad, the stars on GitHub (187k) as well as the contributions to stack overflow. This support in the developer community ensures that Il will eventually find solutions when troubleshooting.
+
 Mobile version: with its associated ecosystem of tools, React is also a good springboard for my next project, where I want to use React Native for a mobile application. So getting familiar with React first is valuable.
 
 I created the application using the Create React App boilerplate, enabling the pwa template to transfer the app into a PWA in the development process:
@@ -38,7 +43,7 @@ Scenario 1: Show a chart with the number of upcoming events in each city Given a
 How to install and run the project:
 ... as a developer, who wants to work with the project
 Clone or download repository ...
-git clone https://github.com/F3NJ0/meet-app.git
+git clone https://github.com/Priyanka-koraganji/meet-project.git
 Connect to your github pages Follow the instructions provided by github: https://pages.github.com
 Edit homepage address in package.json to fit to your github account
 
@@ -47,13 +52,13 @@ npm run start
 To push changes to github pages
 npm run deploy
 ... to access the already hostet the live app:
-https://f3nj0.github.io/meet-app/
+ https://github.priyankak.net/
 
 Technical Requirements: (according to project brief)
 React application
 Built using TDD technique
 Use the Google Calendar API and OAuth2 authentication flow.
-Use use serverless functions (AWS lambda is preferred) for the authorization server instead of using a traditional server
+Use serverless functions (AWS lambda is preferred) for the authorization server instead of using a traditional server
 Work offline or in slow network conditions with the help of a service worker.
 Use React axios and async/await.
 Implement an alert system using an OOP approach to show information to the user.
